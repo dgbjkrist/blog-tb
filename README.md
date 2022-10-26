@@ -16,6 +16,19 @@ Dans un premier temps, cloner le repository : `git clone https://github.com/TBoi
 Pensez à créer votre fichier pour votre environnement de développement `.env.dev.local` :
 ```dotenv
 DATABASE_URL=mysql://USER:PASSWORD@127.0.0.1:3306/DBNAME
+
+composer update
+
+composer recipes:install --force -v
+
+composer install
+
+composer require laminas/laminas-zendframework-bridge
+```  
+Okay, what we need to do is change all of these 5.0.* to 5.4.*. I'm going to do a "Find & Replace" to replace 5.0.* with 5.4.*. Hit "Replace All".
+
+```dotenv
+composer up
 ```
 
 Puis executer le script `composer prepare` pour créer la base de données et intérgrer les fixtures.
